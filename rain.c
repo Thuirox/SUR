@@ -58,6 +58,8 @@ int main(int argc, char * argv[])
 
     const int nbDrops = 100;
 
+    int firstDropHitGround = 0;
+
     Splash *splashs = (Splash *)malloc(sizeof(Splash));
     Splash splash;
 
@@ -68,9 +70,6 @@ int main(int argc, char * argv[])
     const int sunX = screenWidth/2;
     const int sunY = screenHeight-groundHeight;
     const int sunHeight = 100;
-    int offsetYSun;
-    double timeToCulmination;
-    double ratioToCulmination;
 
     const int fontSize = 200;
     const int textY = 200;
@@ -82,8 +81,6 @@ int main(int argc, char * argv[])
     rawtime = time(NULL);
     timeinfo = localtime(&rawtime);
     clockText = TextFormat("%02i:%02i", timeinfo->tm_hour, timeinfo->tm_min);
-
-    double offsetYSunBaseValue = sunY - textY;
 
     Color skyColor = CLITERAL(Color){ 255, 148, 71, 255 };
     groundColor = skyColor;
@@ -153,6 +150,7 @@ int main(int argc, char * argv[])
 
                 if(drop.length <= 0){
                     newDrop(drops, i);
+                    firstDropHitGround = 1;
                 } else {
                     DrawRectangle((int)drop.x, (int)drop.y, (int)drop.width, (int)(drop.length), CLITERAL(Color){ 0, 0, 0, 50 });
                     drops[i].y = drop.y + drop.velocityY;
