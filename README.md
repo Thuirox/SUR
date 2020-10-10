@@ -22,9 +22,9 @@ If it is not done yet, install git on your raspberry pi with the following comma
 
 Now go to /raylib/examples : ```cd ~/raylib/examples```
 
-And clone the SUR repository :  ```clone https://github.com/Thuirox/SUR.git```
+And clone the SUR repository :  ```git clone https://github.com/Thuirox/SUR.git```
 
-Compile the code : ```make /SUR/rain PLATFORM=PLATFORM_RPI```
+Compile the code : ```make SUR/rain PLATFORM=PLATFORM_RPI```
 
 ### 4. Make the raspberry boot on SUR
 Firstly, we update the file .bashrc to run the program when a console is launched.
