@@ -30,7 +30,7 @@ Compile the code : ```make SUR/rain PLATFORM=PLATFORM_RPI```
 Firstly, we update the file .bashrc to run the program when a console is launched.
 ```sudo nano ~/.bashrc```
 
-At the end of the file add the following line : ```~/raylib/examples/rain/rain```
+At the end of the file add the following line : ```~/raylib/examples/SUR/rain```
 
 And now, we need to make the system stop asking to log in when it boots. For this, we are going to run : ```sudo raspi-config```
 
