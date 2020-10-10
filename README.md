@@ -1,7 +1,7 @@
 # SUR (Sunset under rain)
 
 ## What's that ?
-SUR, Sunset Under Rain, is a satisfying beautiful screen of a sunset along a rainy weather. It has been made to run on a raspberry pi 3 with no desktop environment, displaying the animation on any screen linked by a HDMI cable.
+SUR, Sunset Under Rain, is a satisfying beautiful screen of a sunset along a rainy weather. It can also be used as a clock. It has been made to run on a raspberry pi 3 with no desktop environment, displaying the animation on any screen linked by a HDMI cable.
 
 ## Prerequisites
 * Raspberry pi 3 (with stuffs necessary to make it works)
@@ -19,15 +19,21 @@ For this step, once again I am not going to explain you how to do it. Because th
 
 ### 3. Install this repository
 If it is not done yet, install git on your raspberry pi with the following command : ```sudo apt install git```
+
 Now go to /raylib/examples : ```cd ~/raylib/examples```
+
 And clone the SUR repository :  ```clone https://github.com/Thuirox/SUR.git```
+
 Compile the code : ```make /SUR/rain PLATFORM=PLATFORM_RPI```
 
 ### 4. Make the raspberry boot on SUR
 Firstly, we update the file .bashrc to run the program when a console is launched.
 ```sudo nano ~/.bashrc```
+
 At the end of the file add the following line : ```~/raylib/examples/rain/rain```
 
 And now, we need to make the system stop asking to log in when it boots. For this, we are going to run : ```sudo raspi-config```
+
 Go to "3 Boot options" -> "B1 Desktop / CLI" -> "B2 Console Autologin".
-Finish and reboot it.
+
+Finish and reboot the raspberry pi.
