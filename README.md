@@ -1,7 +1,6 @@
 # SUR (Sunset under rain)
 
-## What's that ?
-SUR, Sunset Under Rain, is a satisfying beautiful screen of a sunset along a rainy weather. It can also be used as a clock. It has been made to run on a raspberry pi 3 with no desktop environment, displaying the animation on any screen linked by a HDMI cable.
+SUR is a decorative screen of a sunset along a rainy weather created to be sastifying to watch. It can also be used as a clock. It has been made to run on a raspberry pi 3 with no desktop environment, displaying the animation on any screen linked by a HDMI cable.
 
 ## Prerequisites
 * Raspberry pi 3 (with stuffs necessary to make it works)
